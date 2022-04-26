@@ -9,6 +9,11 @@ public class ButtonDoThing : MonoBehaviour
 		GetComponent<Animator>().SetBool("dead", true);
 	}
 
+	public void Revive()
+	{
+		GetComponent<Animator>().SetBool("dead", false);
+	}
+
 	public void RandomiseColours()
 	{
 		foreach (var mesh in gameObject.GetComponentsInChildren<SkinnedMeshRenderer>())
